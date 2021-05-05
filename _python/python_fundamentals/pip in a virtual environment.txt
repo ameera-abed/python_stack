@@ -1,0 +1,69 @@
+﻿
+ameera@DESKTOP-A7H3OTJ MINGW64 ~/Desktop/python_stack/python_stack/my_envierment (master)
+$ pip list
+Package    Version
+---------- -------
+pip        21.1.1
+setuptools 56.0.0
+
+pip list return all the packages 
+
+------------------------------------------------------
+
+
+
+
+
+
+----------------------------------------------------------
+(py3Env) C:\Users\ameera\Desktop\python_stack\python_stack\my_envierment>pip3 list
+Package    Version
+---------- -------
+pip        21.1.1
+setuptools 56.0.0
+
+pip3 list  its work on python 3 but pip list work in diffrent version of python
+--------------------------------------------------------------------
+
+(py3Env) C:\Users\ameera\Desktop\python_stack\python_stack\my_envierment>pip install Django==2.2.4
+Collecting Django==2.2.4
+  Downloading Django-2.2.4-py3-none-any.whl (7.5 MB)
+     |████████████████████████████████| 7.5 MB 364 kB/s
+Collecting pytz
+  Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)
+     |████████████████████████████████| 510 kB 364 kB/s
+Collecting sqlparse
+  Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+     |████████████████████████████████| 42 kB 105 kB/s
+Installing collected packages: sqlparse, pytz, Django
+Successfully installed Django-2.2.4 pytz-2021.1 sqlparse-0.4.1
+
+its install Djanco
+-------------------------------------------------------------------------
+(py3Env) C:\Users\ameera\Desktop\python_stack\python_stack\my_envierment>pip freeze
+Django==2.2.4
+pytz==2021.1
+sqlparse==0.4.1
+
+pip freeze return all output installed packages but pip list  return all installed packages
+-------------------------------------------------------------------
+pip freeze > requirements.txt its copied the packages  into the folder
+-----------------------------------------------------------------------
+:\Users\ameera\Desktop\python_stack\python_stack\my_envierment>pip uninstall Django
+Found existing installation: Django 2.2.4
+Uninstalling Django-2.2.4:
+  Would remove:
+    c:\users\ameera\appdata\local\programs\python\python39\lib\site-packages\django-2.2.4.dist-info\*
+    c:\users\ameera\appdata\local\programs\python\python39\lib\site-packages\django\*
+    c:\users\ameera\appdata\local\programs\python\python39\scripts\django-admin.exe
+    c:\users\ameera\appdata\local\programs\python\python39\scripts\django-admin.py
+Proceed (y/n)? y
+  Successfully uninstalled Django-2.2.4
+this command will uninstall the Django
+----------------------------------------------------------------------
+C:\Users\ameera\Desktop\python_stack\python_stack\my_envierment>pip show Django
+WARNING: Package(s) not found: Django
+
+not show it because its unistall 
+----------------------------------------------------
+------------------------------------------------------------------------
