@@ -10,7 +10,7 @@ pip list return all the packages
 
 ------------------------------------------------------
 
-
+deactivate will deactivate the virsual enveroment 
 
 
 
