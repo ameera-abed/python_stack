@@ -12,9 +12,9 @@ def dojo():
 def say(name):
     return f"hi {name}"
 
-@app.route("/repeat/<int:num>/hello")
-def repeate(num): 
-    return f"hello  " *num 
+@app.route("/repeat/<int:num>/<word>")
+def repeate(num,word): 
+    return f"{word} " *num 
 
 
 
