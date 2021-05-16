@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index5.css') }}">
+
+</head>
+
+<body>
+    {% if choice =="1"%}
+    <div class="outside">
+        {% for i in range(0,4): %} {% for i in range(0,4): %}
+        <div class="inside">
+        </div>
+        <div class="inside2">
+        </div>
+        {% endfor %} {% for i in range(0,4): %}
+        <div class="inside2">
+        </div>
+        <div class="inside">
+        </div>
+        {% endfor %} {% endfor %}
+    </div>
+    {% endif %} {% if choice =="2"%}
+
+    <div class="outside">
+        {% for i in range(0,4): %} {% for i in range(0,2): %}
+        <div class="inside">
+        </div>
+        <div class="inside2">
+        </div>
+        {% endfor %} {% for i in range(0,2): %}
+        <div class="inside2">
+        </div>
+        <div class="inside">
+        </div>
+        {% endfor %} {% endfor %}
+    </div>
+    {% endif %} {% if choice =="3" %}
+    <div class="outside">
+        {% for i in range(0,x): %} {% for i in range(0,y): %}
+        <div class="inside">
+        </div>
+        <div class="inside2">
+        </div>
+
+
+        {% endfor %} {% endfor %}
+    </div>
+    {% endif %}
+
+
+
+
+
+</body>
+
+</html>
