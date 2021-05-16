@@ -6,51 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='index5.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 </head>
 
 <body>
-    {% if choice =="1"%}
-    <div class="outside">
-        {% for i in range(0,4): %} {% for i in range(0,4): %}
-        <div class="inside">
-        </div>
-        <div class="inside2">
-        </div>
-        {% endfor %} {% for i in range(0,4): %}
-        <div class="inside2">
-        </div>
-        <div class="inside">
-        </div>
-        {% endfor %} {% endfor %}
-    </div>
-    {% endif %} {% if choice =="2"%}
 
-    <div class="outside">
-        {% for i in range(0,4): %} {% for i in range(0,2): %}
-        <div class="inside">
-        </div>
-        <div class="inside2">
-        </div>
-        {% endfor %} {% for i in range(0,2): %}
-        <div class="inside2">
-        </div>
-        <div class="inside">
-        </div>
-        {% endfor %} {% endfor %}
-    </div>
-    {% endif %} {% if choice =="3" %}
-    <div class="outside">
-        {% for i in range(0,x): %} {% for i in range(0,y): %}
-        <div class="inside">
-        </div>
-        <div class="inside2">
-        </div>
+    {% if choice =="1" %}
+    <table>
+        {% for i in range(8): %}
+        <tr></tr>
+        {% for j in range(8): %}
+        <td class='color{{(i+j)%2+1}}'>
+        </td>
+        {% endfor %}
+        </tr> {% endfor %}
+    </table>
+    {% endif %}
+
+    <!-- part2-->
+    {% if choice =="2" %}
+    <table>
+        {% for i in range(8): %}
+        <tr></tr>
+        {% for j in range(4): %}
+        <td class='color{{(i+j)%2+1}}'>
+        </td>
+        {% endfor %}
+        </tr> {% endfor %}
+    </table>
+    {% endif %}
+
+    <!--end part2-->
 
 
-        {% endfor %} {% endfor %}
-    </div>
+    {% if choice =="3" %}
+    <table>
+        {% for i in range(x): %}
+        <tr></tr>
+        {% for j in range(y): %}
+        <td class='color{{(i+j)%2+1}}'>
+        </td>
+        {% endfor %}
+        </tr> {% endfor %}
+    </table>
     {% endif %}
 
 

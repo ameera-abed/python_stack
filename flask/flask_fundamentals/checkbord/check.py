@@ -10,7 +10,6 @@ def checkbord_2():
 
 @ app.route("/<int:x>/<int:y>")
 def checkbord_3(x,y):
-  
     return  render_template("index.html",choice="3",x=x,y=y)
 
 
