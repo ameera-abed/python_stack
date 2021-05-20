@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 # Create your views here.
 def root(request):
@@ -8,3 +8,7 @@ def root(request):
         "num_visits":num_visits,
     }
     return render(request,"index.html",context)
+
+def distroy(request):
+    del request.session['num_visits'] 
+    return redirect("/")
