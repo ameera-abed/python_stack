@@ -1,0 +1,59 @@
+          * {
+              margin: 0px;
+              padding: 0px;
+              box-sizing: border-box;
+          }
+          
+          body {
+              background-color: rgb(88, 85, 85);
+          }
+          
+          .cont {
+              width: 50%;
+              margin: 20px auto;
+              text-align: center;
+              color: orange;
+          }
+          
+          .cont h1 {
+              padding: 40px;
+          }
+          
+          .cont p,
+          h3 {
+              padding: 20px;
+          }
+          
+          .one,
+          .tow,
+          .three {
+              background-color: green;
+              width: 300px;
+              height: 300px;
+              color: white;
+              margin: 10px auto;
+              font-size: 40px;
+              text-align: center;
+              padding-top: 40px;
+          }
+          
+          .tow {
+              background-color: rgb(228, 21, 83);
+          }
+          
+          .three {
+              background-color: rgb(93, 45, 204);
+          }
+          
+          button {
+              padding: 10px;
+              background-color: #585555;
+              color: white;
+          }
+          
+          input {
+              padding: 10px;
+              display: block;
+              margin-left: 238px;
+              margin-bottom: 20px;
+          }

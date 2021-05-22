@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+
+<body>
+    <div class="cont">
+        <h1>welcome to the great number game !</h1>
+        <p> Iam thinking of anumber between 1 and 100</p>
+        <h3>take aguess !</h3>
+        <!--show the random quess
+             <div style="background-color: aqua;">{{quess}}</div>
+        -->
+
+        {% if status == 1 %}
+        <div class="one">
+            <div>{{your_quess}} was the number</div>
+            <form action="/reset" method="post">
+                {% csrf_token %}
+                <button type="submit" class="reset">reset</button>
+            </form>
+        </div> {% endif %}
+
+        <!-- too low-->
+        {% if status == 2 %}
+        <div class="tow">
+            <div>too low</div>
+
+        </div>
+        {% endif %}
+        <!--try_again-->
+        {% if try_btn == True %}
+        <form action="/back" method="post">
+            {% csrf_token %}
+            <button type="submit" class="back">back</button>
+        </form>
+        {% endif %}
+
+        <!---too high-->
+        {% if status == 3 %}
+        <div class="three">too high</div>
+
+        {% endif %}
+        <!--end -->
+        {%if show_submit_btn == True %}
+        <form action="/result" method="post">
+            {% csrf_token %}
+            <input type="text" name="user_input" id="user_input">
+            <button type="submit">submit</button>
+
+        </form>
+        {% endif %}
+
+
+</body>
+
+</html>
