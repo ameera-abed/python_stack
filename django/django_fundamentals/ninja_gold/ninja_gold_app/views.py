@@ -44,12 +44,15 @@ def process_gold(request):
         return redirect('/')
 
     if request.POST['building'] == 'casino':
-        request.session['gold'] += casino
-        activities=f"You earn {casino} pieces of gold from the Casino ({now_formatted})"
-        request.session["activities"].append(activities)
-        if random.randint(0,1) > 50: 
+        if casino > 25: 
             request.session['gold'] -= casino
             activities= f"Entered a << Casino >> and lost {casino} golds!! Oops!) ({now_formatted})"
-            request.session["activities"].append(activities)  # as well as the 'result'
+            request.session["lose"]="lose"
+            request.session["activities"].append(activities) 
+        else:
+            request.session['gold'] += casino
+            activities=f"You earn {casino} pieces of gold from the Casino ({now_formatted})"
+            request.session["activities"].append(activities) 
+                    
     return redirect('/')            
 
